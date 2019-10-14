@@ -1,0 +1,24 @@
+{
+  "apps": [
+    "name": "ice",
+    "script": "server.js",
+    "env": {
+      "COMMON_VARIABLE": "true"
+    },
+    "env_production": {
+      "NODE_ENV": "production"
+    }
+  ],
+  "deploy": {
+    "user": "brolly",
+    "host": ["39.107.90.44"],
+    "ref": "origin/master",
+    "repo": "git@github.com:Brolly0204/ices.git",
+    "path": "/root/www",
+    "ssh_options": "StrictHostKeyChecking=no",
+    "pre-deploy-local": "echo 'Deploy Done!'",
+    "env": {
+      "NODE_ENV": "production"
+    }
+  }
+}
